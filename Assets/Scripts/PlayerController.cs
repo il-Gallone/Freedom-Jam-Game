@@ -11,6 +11,19 @@ public class PlayerController : MonoBehaviour
     public float speed = 3;
     public float rotationAngle = 15;
 
+    public int hp;
+    public int birds = 1;
+    public int hpModifier;
+
+    float invulnSecs = 0;
+    float invulnFlash = 0;
+    bool isFlash = false;
+
+    private void Start()
+    {
+        hp = birds * hpModifier;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +50,37 @@ public class PlayerController : MonoBehaviour
         if(Input.GetAxis("Horizontal") > 0)
         {
             rigid2D.velocity += new Vector2(speed, 0);
+        }
+        if (invulnSecs > 0)
+        {
+            invulnSecs -= Time.deltaTime;
+            invulnFlash += Time.deltaTime;
+            if (invulnFlash >= 0.3f)
+            {
+                if (isFlash)
+                {
+                    gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 0.8f);
+                    isFlash = false;
+                }
+                else
+                {
+                    gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 0.8f, 0.8f, 0.8f);
+                    isFlash = true;
+                }
+            }
+            if (invulnSecs <= 0)
+            {
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Obstacle") && invulnSecs <= 0)
+        {
+            hp--;
+            invulnSecs = 4;
+            //TODO Death condition;
         }
     }
 }

@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour
     public float accelRate = 0.05f;
     public Rigidbody2D rigid2D;
     public PlayerController player;
-    
+
     // Update is called once per frame
     void Update()
     {
