@@ -400,8 +400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 246aed0c64b6e254cba84083309f1063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleTopPrefab: {fileID: 595430301133937131, guid: d58dc401b84d8a741a9a2cb1585d1024, type: 3}
-  obstacleBotPrefab: {fileID: 595430301133937131, guid: d58dc401b84d8a741a9a2cb1585d1024, type: 3}
+  obstacleTopPrefab: {fileID: 4122638225516621324, guid: 3c2db5154f029b540bdc67d69211dd9b, type: 3}
+  obstacleBotPrefab: {fileID: 7691190386364871043, guid: 28f8fd82ad6bfa84bbd96c69114b3d25, type: 3}
   KeyPrefab: {fileID: 3748207767569851190, guid: 9bc0a2bd677356e439c58930bad9edf0, type: 3}
   CagePrefab: {fileID: 1079235600805594392, guid: b2770bbae1dc0524ca9df4fab13a6d17, type: 3}
   cameraObject: {fileID: 519420028}
