@@ -24,7 +24,7 @@ public class ScoreBoard : MonoBehaviour
         }
         if (birds < 2)
         {
-            bird3.SetActive(false);
+            bird1.SetActive(false);
             text.text = "You escaped but all on your own. Try and rescue some more friends.";
         }
         if(birds >= 4)
