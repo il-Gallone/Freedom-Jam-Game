@@ -402,6 +402,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacleTopPrefab: {fileID: 595430301133937131, guid: d58dc401b84d8a741a9a2cb1585d1024, type: 3}
   obstacleBotPrefab: {fileID: 595430301133937131, guid: d58dc401b84d8a741a9a2cb1585d1024, type: 3}
+  KeyPrefab: {fileID: 3748207767569851190, guid: 9bc0a2bd677356e439c58930bad9edf0, type: 3}
+  CagePrefab: {fileID: 1079235600805594392, guid: b2770bbae1dc0524ca9df4fab13a6d17, type: 3}
   cameraObject: {fileID: 519420028}
   minDistanceModifier: 2.5
   maxDistanceModifier: 6

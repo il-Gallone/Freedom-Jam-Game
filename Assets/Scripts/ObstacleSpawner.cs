@@ -22,6 +22,7 @@ public class ObstacleSpawner : MonoBehaviour
     bool lastObstacleTop = true;
 
     int bonusCountdown = 3;
+    public int bonusDistance = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,11 +43,37 @@ public class ObstacleSpawner : MonoBehaviour
                 GameObject obstacle = Instantiate(obstacleBotPrefab, new Vector3(lastDistance, Random.Range(-6f, -3f), 0), Quaternion.identity);
                 Destroy(obstacle, screenWidth / CameraMovement.moveSpeed + maxDistanceModifier + 4);
             }
-            else if (!lastObstacleTop)
+            else
             {
                 lastObstacleTop = true;
                 GameObject obstacle = Instantiate(obstacleTopPrefab, new Vector3(lastDistance, Random.Range(3f, 6f), 0), Quaternion.identity);
                 Destroy(obstacle, screenWidth / CameraMovement.moveSpeed + maxDistanceModifier + 4);
+            }
+            bonusCountdown--;
+        }
+        if(bonusCountdown == 0)
+        {
+            bonusCountdown = bonusDistance;
+            Vector3 spawnPositon;
+            if (lastObstacleTop)
+            {
+                spawnPositon = new Vector3(lastDistance + nextDistance / 2, Random.Range(-4f, -1f), 0);
+            }
+            else
+            {
+                spawnPositon = new Vector3(lastDistance + nextDistance / 2, Random.Range(1f, 4f), 0);
+            }
+            if(lastBonusKey)
+            {
+                lastBonusKey = false;
+                GameObject bonus = Instantiate(CagePrefab, spawnPositon, Quaternion.identity);
+                Destroy(bonus, screenWidth / CameraMovement.moveSpeed + maxDistanceModifier + 4);
+            }
+            else
+            {
+                lastBonusKey = true;
+                GameObject bonus = Instantiate(KeyPrefab, spawnPositon, Quaternion.identity);
+                Destroy(bonus, screenWidth / CameraMovement.moveSpeed + maxDistanceModifier + 4);
             }
         }
     }
