@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <EDIT appVersion="Waveform 11.0.26" projectID="6f29dd/2ffb04b" creationTime="1639274378908"
-      lastSignificantChange="17dad216745" modifiedBy="Kamil">
-  <TRANSPORT position="0.0" scrubInterval="2.028123210936319" loopPoint1="0.0"
+      lastSignificantChange="17dadb3554c" modifiedBy="Kamil">
+  <TRANSPORT position="0.0" scrubInterval="1.818422358273428" loopPoint1="0.0"
              loopPoint2="0.0"/>
   <MACROPARAMETERS id="1001"/>
   <TEMPOSEQUENCE>
@@ -28,7 +28,7 @@
   <INPUTDEVICES>
     <INPUTDEVICE name="Keyboard"/>
     <INPUTDEVICE name="2- CASIO USB IN  1">
-      <INPUTDEVICEDESTINATION targetTrack="1038" targetIndex="0"/>
+      <INPUTDEVICEDESTINATION targetTrack="1025" targetIndex="0"/>
     </INPUTDEVICE>
   </INPUTDEVICES>
   <TRACKCOMPS/>
@@ -432,7 +432,7 @@
       <MACROPARAMETERS id="1142"/>
       <MODIFIERASSIGNMENTS/>
     </PLUGIN>
-    <PLUGIN type="volume" id="1030" enabled="1" volume="0.2235767841339111"
+    <PLUGIN type="volume" id="1030" enabled="1" volume="0.2839215993881226"
             windowX="80" windowY="103" windowLocked="0">
       <MACROPARAMETERS id="1031"/>
       <MODIFIERASSIGNMENTS/>
@@ -669,7 +669,7 @@
       <MACROPARAMETERS id="1156"/>
       <MODIFIERASSIGNMENTS/>
     </PLUGIN>
-    <PLUGIN type="volume" id="1056" enabled="1" volume="0.6244388818740845"
+    <PLUGIN type="volume" id="1056" enabled="1" volume="0.3571974635124207"
             windowX="80" windowY="103" windowLocked="0">
       <MACROPARAMETERS id="1057"/>
       <MODIFIERASSIGNMENTS/>
@@ -743,9 +743,9 @@
   </TRACK>
   <ARADOCUMENT/>
   <CONTROLLERMAPPINGS/>
-  <VIEWSTATE minimalTransportBar="1" hiddenClips="" lockedClips="" chordTrackVisible="0"
+  <VIEWSTATE minimalTransportBar="0" hiddenClips="" lockedClips="" chordTrackVisible="0"
              arrangerTrackVisible="0" disabledSearchLibraries="" enabledTrackTags=""
-             currentSidePanel="Search" viewleft="-1.0" viewright="100.406160546816"
+             currentSidePanel="Search" viewleft="1.458274641550318" viewright="92.37939255522174"
              tracktop="0.0" pluginAreaWidth="0.881165087223053" midiEditorShown="1"
              pluginsVisible="1" midiEditorHeight="0.2060672044754028"/>
   <EDITMIXGROUPS/>
