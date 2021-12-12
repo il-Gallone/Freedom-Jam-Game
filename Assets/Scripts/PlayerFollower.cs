@@ -86,9 +86,10 @@ public class PlayerFollower : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        if (SceneManager.GetActiveScene().name == "Score Sky" && isPlayer)
+        if (SceneManager.GetActiveScene().name == "Score Sky")
         {
-            ScoreBoard.birds = PlayerController.hp;
+            if(isPlayer)
+                ScoreBoard.birds = PlayerController.hp;
             Destroy(gameObject);
         }
         if (SceneManager.GetActiveScene().name == "Main Menu")

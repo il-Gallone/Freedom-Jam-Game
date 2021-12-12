@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 595430301133937129}
   - component: {fileID: -5129287633198900318}
   - component: {fileID: 595430301133937128}
-  - component: {fileID: -5247372465048393698}
+  - component: {fileID: -2412780013420471295}
   m_Layer: 0
   m_Name: DebugObstacle
   m_TagString: Obstacle
@@ -123,7 +123,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!82 &-5247372465048393698
+--- !u!82 &-2412780013420471295
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

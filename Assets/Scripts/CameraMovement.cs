@@ -23,7 +23,7 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        if (cameraX <= levelEndX)
+        if (cameraX <= levelEndX && PlayerController.hp > 0)
         {
             cameraX = transform.position.x;
             moveSpeed += accelRate * Time.deltaTime;

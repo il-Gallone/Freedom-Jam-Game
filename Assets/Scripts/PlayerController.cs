@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         rigid2D.velocity = new Vector2(CameraMovement.moveSpeed, 0);
-        if (CameraMovement.cameraX <= CameraMovement.levelEndX)
+        if (CameraMovement.cameraX <= CameraMovement.levelEndX && hp > 0)
         {
             if (Input.GetAxis("Vertical") > 0 && transform.position.y <= screenHeight / 2 - 1)
             {
@@ -90,10 +90,9 @@ public class PlayerController : MonoBehaviour
                     audioData.Play(0);
                 }
                 hp--;
+                lastFollower.BirdHit();
                 if (hp > 0)
                 {
-                    lastFollower.BirdHit();
-                    GameObject bird = lastFollower.gameObject;
                     lastFollower = lastFollower.following;
 
                     invulnSecs = 4;

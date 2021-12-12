@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5011992245143976765}
   - component: {fileID: 801068853219063386}
   - component: {fileID: 4824452876280375228}
-  - component: {fileID: -8540513079303974255}
+  - component: {fileID: 2557427513136800633}
   m_Layer: 0
   m_Name: SewageObstacle
   m_TagString: Obstacle
@@ -180,7 +180,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!82 &-8540513079303974255
+--- !u!82 &2557427513136800633
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

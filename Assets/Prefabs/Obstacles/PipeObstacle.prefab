@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 817430830778891115}
   - component: {fileID: 2090763540539925327}
   - component: {fileID: 7293241099860545618}
-  - component: {fileID: 371039468556658117}
+  - component: {fileID: 3323026495060781888}
   m_Layer: 0
   m_Name: PipeObstacle
   m_TagString: Obstacle
@@ -123,7 +123,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 6}
   m_EdgeRadius: 0
---- !u!82 &371039468556658117
+--- !u!82 &3323026495060781888
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
