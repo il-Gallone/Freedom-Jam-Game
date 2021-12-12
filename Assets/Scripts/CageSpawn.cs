@@ -7,6 +7,7 @@ public class CageSpawn : MonoBehaviour
     public GameObject padlock;
     public List<GameObject> cagedBirds;
     public List<GameObject> birdFollowers;
+    public AudioClip freeSound;
     GameObject trappedBird;
 
     public bool isBirdFreed = false;
@@ -22,9 +23,13 @@ public class CageSpawn : MonoBehaviour
 
     public GameObject FreeTheBird()
     {
-        Destroy(padlock);
         Destroy(trappedBird);
+        Destroy(padlock);
         GameObject freedBird = Instantiate(birdFollowers[chosenBird], transform.position, Quaternion.identity);
+        padlock.GetComponent<Renderer>().enabled = false;
+        AudioSource cageSoundSource = gameObject.GetComponent<AudioSource>();
+        cageSoundSource.clip = freeSound;
+        cageSoundSource.Play(0);
         return freedBird;
     }
 }

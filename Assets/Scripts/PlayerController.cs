@@ -79,16 +79,29 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        AudioSource audioData = collision.gameObject.GetComponent<AudioSource>();
+
         if (collision.CompareTag("Obstacle") && invulnSecs <= 0)
         {
+            if (audioData)
+            {
+                audioData.Play(0);
+            }
             hp--;
             invulnSecs = 4;
             //TODO Death condition;
         }
         if(collision.CompareTag("Key"))
         {
+            if (audioData)
+            {
+                Debug.Log("collected key");
+                Debug.Log(audioData);
+                audioData.Play(0);
+            }
             keyCount++;
-            Destroy(collision.gameObject);
+            collision.GetComponent<Renderer>().enabled = false;
+            Destroy(collision.gameObject, audioData.clip.length);
         }
         if(collision.CompareTag("Cage") && keyCount > 0)
         {
