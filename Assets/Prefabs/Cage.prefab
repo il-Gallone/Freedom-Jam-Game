@@ -152,7 +152,7 @@ MonoBehaviour:
   - {fileID: 6445360455869459285, guid: 73c0da2adee1ba0438ceb695c0330c0e, type: 3}
   - {fileID: 2564033796605361079, guid: ad977ba01908263488e023d07dd7a189, type: 3}
   - {fileID: 3686769151029863423, guid: 6645b5c5205f8504aa761a98d747a8d9, type: 3}
-  - {fileID: 4116900696454897359, guid: 6b2863e7bcabdaf4f806e9b9486cca90, type: 3}
+  - {fileID: 3686769151029863423, guid: 6645b5c5205f8504aa761a98d747a8d9, type: 3}
   freeSound: {fileID: 8300000, guid: a0dd36d7d50de974fb09531fecd173a7, type: 3}
   isBirdFreed: 0
 --- !u!82 &4658753822240006223
