@@ -25,6 +25,12 @@ public class ButtonHandler : MonoBehaviour
             case "Enter Mines":
                 SceneManager.LoadScene("MineScene");
                 break;
+            case "Score Sky":
+                SceneManager.LoadScene("Score Sky");
+                break;
+            case "Main Menu":
+                SceneManager.LoadScene("Main Menu");
+                break;
         }
     }
 

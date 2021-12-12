@@ -134,11 +134,13 @@ MonoBehaviour:
   - {fileID: 7189204652266390833, guid: 935dd96250c6ae440acf7a235ad93546, type: 3}
   - {fileID: 2725059334792710584, guid: 50c09c20ec4c19d40ba21e2733f82ce2, type: 3}
   - {fileID: 5147362079739272687, guid: 19946cbbb5d53864aa2ee253a3bd0688, type: 3}
+  - {fileID: 5773780360690456210, guid: dba315da849460f468ec6af651bd2a7f, type: 3}
   birdFollowers:
   - {fileID: 4281907023625794125, guid: 7e295758603ae8f4aaf92cf63b494027, type: 3}
   - {fileID: 7257975326723567024, guid: 1e87dddfe74411742ac1292215a92096, type: 3}
   - {fileID: 1764553641453994552, guid: 22590e5d007ae014b939b5b04649869b, type: 3}
   - {fileID: 2995941615615032466, guid: d2cfd6572ae019749a74cc6dcd3e26f0, type: 3}
+  - {fileID: 4938890054884543331, guid: aca5efd3db0515445a4723310cde604e, type: 3}
   freeSound: {fileID: 8300000, guid: a0dd36d7d50de974fb09531fecd173a7, type: 3}
   isBirdFreed: 0
 --- !u!82 &4658753822240006223
