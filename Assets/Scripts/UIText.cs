@@ -13,7 +13,7 @@ public class UIText : MonoBehaviour
     void Update()
     {
         if (id == "HP")
-            text.text = "HP: " + PlayerController.hp.ToString();
+            text.text = "Birds: " + PlayerController.hp.ToString();
         if (id == "keys")
             text.text = "Keys: " + PlayerController.keyCount.ToString();
     }
