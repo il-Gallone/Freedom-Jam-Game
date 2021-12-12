@@ -55,11 +55,11 @@ public class ObstacleSpawner : MonoBehaviour
             Vector3 spawnPositon;
             if (lastObstacleTop)
             {
-                spawnPositon = new Vector3(lastDistance + nextDistance / 2, Random.Range(-4f, -1f), 0);
+                spawnPositon = new Vector3(lastDistance + nextDistance / 2, Random.Range(-3f, -1f), 0);
             }
             else
             {
-                spawnPositon = new Vector3(lastDistance + nextDistance / 2, Random.Range(1f, 4f), 0);
+                spawnPositon = new Vector3(lastDistance + nextDistance / 2, Random.Range(1f, 3f), 0);
             }
             if(lastBonusKey)
             {
