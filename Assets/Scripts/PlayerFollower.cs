@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerFollower : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PlayerFollower : MonoBehaviour
     public Rigidbody2D rigid2D;
     float yCounter;
     public float rotationAngle = 15;
+    bool isHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class PlayerFollower : MonoBehaviour
         {
             isPlayer = true;
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     // Update is called once per frame
@@ -30,7 +33,7 @@ public class PlayerFollower : MonoBehaviour
             yCounter = 0;
             lastY = transform.position.y;
         }
-        if (!isPlayer)
+        if (!isPlayer && !isHit)
         {
             speed = following.speed;
             rigid2D.velocity = new Vector2(CameraMovement.moveSpeed, 0);
@@ -63,6 +66,26 @@ public class PlayerFollower : MonoBehaviour
         else
         {
             speed = gameObject.GetComponent<PlayerController>().speed;
+        }
+    }
+
+    public void BirdHit()
+    {
+        isHit = true;
+        rigid2D.gravityScale = 2;
+        rigid2D.angularVelocity = 90;
+        Destroy(gameObject, 10);
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            transform.position = Vector3.zero;
         }
     }
 }

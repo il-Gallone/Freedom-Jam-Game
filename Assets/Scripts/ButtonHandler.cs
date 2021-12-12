@@ -5,28 +5,13 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ButtonHandler : MonoBehaviour
-{
-    Button button;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        button = gameObject.GetComponent<Button>();
-
-        button.onClick.AddListener(HandleClick);        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+{  
 
 
-    void HandleClick()
+    public void HandleClick(string id)
     {
         Debug.Log("button clicked");
-        switch(button.name)
+        switch(id)
         {
             case "Story Mode":
                 StartGame();
@@ -40,7 +25,7 @@ public class ButtonHandler : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("test successful");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SewerScene");
     }
 
     public void Quit()

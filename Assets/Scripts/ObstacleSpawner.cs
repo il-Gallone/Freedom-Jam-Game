@@ -53,7 +53,7 @@ public class ObstacleSpawner : MonoBehaviour
         }
         if(bonusCountdown == 0)
         {
-            bonusCountdown = bonusDistance;
+            bonusCountdown = bonusDistance + Random.Range(-1, 2);
             Vector3 spawnPositon;
             if (lastObstacleTop)
             {
