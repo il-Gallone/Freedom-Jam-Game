@@ -254,12 +254,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid2D: {fileID: 52520459}
-  cameraObject: {fileID: 519420028}
-  lastFollower: {fileID: 52520465}
-  screenHeight: 9
-  screenWidth: 16
-  speed: 3
+  following: {fileID: 0}
+  followingMe: {fileID: 0}
   rotationAngle: 15
+  lastY: 0
 --- !u!212 &52520461
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1050,7 +1048,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8338983446553829547, guid: 81d2851d6ba8d2a4cad9b6efa3fadbfa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81d2851d6ba8d2a4cad9b6efa3fadbfa, type: 3}
 --- !u!1 &729110260
 GameObject:
@@ -2409,5 +2408,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8338983446553829547, guid: 81d2851d6ba8d2a4cad9b6efa3fadbfa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 81d2851d6ba8d2a4cad9b6efa3fadbfa, type: 3}

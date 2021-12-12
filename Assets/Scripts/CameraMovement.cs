@@ -28,10 +28,10 @@ public class CameraMovement : MonoBehaviour
             cameraX = transform.position.x;
             moveSpeed += accelRate * Time.deltaTime;
             rigid2D.velocity = new Vector2(moveSpeed, 0);
-            if (player.transform.position.x > transform.position.x + player.screenWidth / 4)
+            if (player.transform.position.x > transform.position.x + PlayerController.screenWidth / 4)
             {
-                moveSpeed += accelRate * player.speed / moveSpeed * Time.deltaTime;
-                rigid2D.velocity += new Vector2(player.speed, 0);
+                moveSpeed += accelRate * PlayerController.speed / moveSpeed * Time.deltaTime;
+                rigid2D.velocity += new Vector2(PlayerController.speed, 0);
             }
         }
         else

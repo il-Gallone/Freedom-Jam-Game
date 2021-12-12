@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4938890054884543320}
   - component: {fileID: 4938890054884543335}
   - component: {fileID: 4938890054884543334}
-  - component: {fileID: 4938890054884543333}
   - component: {fileID: 4938890054884543332}
+  - component: {fileID: 3302634996872772615}
+  - component: {fileID: 3467810435214584798}
   m_Layer: 0
   m_Name: Red Bird Follower
   m_TagString: Follower
@@ -104,23 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4938890054884543333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4938890054884543331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5121698dfc974ae4399b4410b51f51ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  following: {fileID: 0}
-  lastY: 0
-  speed: 0
-  rigid2D: {fileID: 4938890054884543332}
-  rotationAngle: 15
 --- !u!50 &4938890054884543332
 Rigidbody2D:
   serializedVersion: 4
@@ -142,3 +126,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3302634996872772615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938890054884543331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d725bfba9934247809a3e95325d5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigid2D: {fileID: 4938890054884543332}
+  following: {fileID: 0}
+  followingMe: {fileID: 0}
+  rotationAngle: 15
+  lastY: 0
+--- !u!70 &3467810435214584798
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938890054884543331}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2, y: 1}
+  m_Direction: 1

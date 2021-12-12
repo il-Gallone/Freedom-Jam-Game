@@ -8,11 +8,11 @@ public class PlayerFollower : MonoBehaviour
     bool isPlayer = false;
     public PlayerFollower following;
     public float lastY = 0;
+    float yCounter;
+    bool isHit = false;
     public float speed;
     public Rigidbody2D rigid2D;
-    float yCounter;
     public float rotationAngle = 15;
-    bool isHit = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,9 +35,6 @@ public class PlayerFollower : MonoBehaviour
         }
         if (!isPlayer)
         {
-            if (!isHit)
-            {
-                speed = following.speed;
                 rigid2D.velocity = new Vector2(CameraMovement.moveSpeed, 0);
                 float xDirection = 0;
                 float yDirection = 0;
@@ -64,12 +61,10 @@ public class PlayerFollower : MonoBehaviour
                     transform.eulerAngles = Vector3.zero;
                 }
                 rigid2D.velocity += new Vector2(xDirection, yDirection) * speed;
-            }
         }
         else
         {
-            speed = gameObject.GetComponent<PlayerController>().speed;
-            if(transform.position.x < CameraMovement.cameraX - gameObject.GetComponent<PlayerController>().screenWidth/2)
+            if(transform.position.x < CameraMovement.cameraX - PlayerController.screenWidth /2)
             {
                 rigid2D.velocity += new Vector2(speed, 0);
             }
