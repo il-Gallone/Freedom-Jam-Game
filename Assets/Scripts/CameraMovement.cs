@@ -16,6 +16,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         levelEndX = levelEndChanger;
         moveSpeed = startSpeed;
     }

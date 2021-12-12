@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5979300645478308974}
   - component: {fileID: 3720436908545524546}
+  - component: {fileID: 6004075509142773801}
   - component: {fileID: 6073158400617774385}
   m_Layer: 0
   m_Name: StalactiteObstacle
@@ -83,6 +84,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6004075509142773801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4500640089001997666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 584acbc722bb6844ab65b2b090171ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &6073158400617774385
 BoxCollider2D:
   m_ObjectHideFlags: 0

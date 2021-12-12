@@ -18,7 +18,6 @@ public class DebugMovementChecker : MonoBehaviour
         {
             lastDistance += debugDistance;
             GameObject debugObject = Instantiate(debugPrefab, new Vector3(lastDistance, 0, 0), Quaternion.identity);
-            Destroy(debugObject, (debugDistance * 2) / CameraMovement.moveSpeed);
         }
     }
 }

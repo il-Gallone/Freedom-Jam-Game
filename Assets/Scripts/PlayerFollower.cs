@@ -33,39 +33,46 @@ public class PlayerFollower : MonoBehaviour
             yCounter = 0;
             lastY = transform.position.y;
         }
-        if (!isPlayer && !isHit)
+        if (!isPlayer)
         {
-            speed = following.speed;
-            rigid2D.velocity = new Vector2(CameraMovement.moveSpeed, 0);
-            float xDirection = 0;
-            float yDirection = 0;
-            if (following.transform.position.x - 2.6f > transform.position.x)
+            if (!isHit)
             {
-                xDirection = 1;
+                speed = following.speed;
+                rigid2D.velocity = new Vector2(CameraMovement.moveSpeed, 0);
+                float xDirection = 0;
+                float yDirection = 0;
+                if (following.transform.position.x - 2.6f > transform.position.x)
+                {
+                    xDirection = 1;
+                }
+                else if (following.transform.position.x - 2.4f < transform.position.x)
+                {
+                    xDirection = -1;
+                }
+                if (following.lastY - 0.1f > transform.position.y)
+                {
+                    yDirection = 1;
+                    transform.eulerAngles = new Vector3(0, 0, rotationAngle);
+                }
+                else if (following.lastY + 0.1f < transform.position.y)
+                {
+                    yDirection = -1;
+                    transform.eulerAngles = new Vector3(0, 0, -rotationAngle);
+                }
+                else
+                {
+                    transform.eulerAngles = Vector3.zero;
+                }
+                rigid2D.velocity += new Vector2(xDirection, yDirection) * speed;
             }
-            else if(following.transform.position.x - 2.4f < transform.position.x)
-            {
-                xDirection = -1;
-            }
-            if (following.lastY -0.1f > transform.position.y)
-            {
-                yDirection = 1;
-                transform.eulerAngles = new Vector3(0, 0, rotationAngle);
-            }
-            else if (following.lastY +0.1f < transform.position.y)
-            {
-                yDirection = -1;
-                transform.eulerAngles = new Vector3(0, 0, -rotationAngle);
-            }
-            else
-            {
-                transform.eulerAngles = Vector3.zero;
-            }
-            rigid2D.velocity += new Vector2(xDirection, yDirection) * speed;
         }
         else
         {
             speed = gameObject.GetComponent<PlayerController>().speed;
+            if(transform.position.x < CameraMovement.cameraX - gameObject.GetComponent<PlayerController>().screenWidth/2)
+            {
+                rigid2D.velocity += new Vector2(speed, 0);
+            }
         }
     }
 
@@ -85,7 +92,7 @@ public class PlayerFollower : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.zero;
+            transform.position = new Vector3(-10, 0, 0);
         }
     }
 }

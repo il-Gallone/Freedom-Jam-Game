@@ -12,9 +12,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 3;
     public float rotationAngle = 15;
 
-    public int hp;
+    public static int hp;
 
-    public int keyCount = 0;
+    public static int keyCount = 0;
 
     float invulnSecs = 0;
     float invulnFlash = 0;

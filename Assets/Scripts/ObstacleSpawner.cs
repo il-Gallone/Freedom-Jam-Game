@@ -41,13 +41,11 @@ public class ObstacleSpawner : MonoBehaviour
             {
                 lastObstacleTop = false;
                 GameObject obstacle = Instantiate(obstacleBotPrefab, new Vector3(lastDistance, Random.Range(-6f, -3f), 0), Quaternion.identity);
-                Destroy(obstacle, screenWidth / CameraMovement.moveSpeed + maxDistanceModifier + 4);
             }
             else
             {
                 lastObstacleTop = true;
                 GameObject obstacle = Instantiate(obstacleTopPrefab, new Vector3(lastDistance, Random.Range(3f, 6f), 0), Quaternion.identity);
-                Destroy(obstacle, screenWidth / CameraMovement.moveSpeed + maxDistanceModifier + 4);
             }
             bonusCountdown--;
         }
@@ -67,13 +65,11 @@ public class ObstacleSpawner : MonoBehaviour
             {
                 lastBonusKey = false;
                 GameObject bonus = Instantiate(CagePrefab, spawnPositon, Quaternion.identity);
-                Destroy(bonus, screenWidth / CameraMovement.moveSpeed + maxDistanceModifier + 4);
             }
             else
             {
                 lastBonusKey = true;
                 GameObject bonus = Instantiate(KeyPrefab, spawnPositon, Quaternion.identity);
-                Destroy(bonus, screenWidth / CameraMovement.moveSpeed + maxDistanceModifier + 4);
             }
         }
     }

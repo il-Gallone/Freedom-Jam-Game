@@ -14,23 +14,20 @@ public class ButtonHandler : MonoBehaviour
         switch(id)
         {
             case "Story Mode":
-                StartGame();
+                SceneManager.LoadScene("SewerScene");
                 break;
             case "Quit":
                 Quit();
                 break;
+            case "Enter Caves":
+                SceneManager.LoadScene("CaveScene");
+                break;
         }
     }
 
-    public void StartGame()
-    {
-        Debug.Log("test successful");
-        SceneManager.LoadScene("SewerScene");
-    }
 
     public void Quit()
     {
-        Debug.Log("I quit!");
         Application.Quit();
     }
 }
