@@ -6,6 +6,8 @@ public class ObstacleSpawner : MonoBehaviour
 {
     public GameObject obstacleTopPrefab;
     public GameObject obstacleBotPrefab;
+    public GameObject KeyPrefab;
+    public GameObject CagePrefab;
 
     public GameObject cameraObject;
     float lastDistance;
@@ -16,7 +18,10 @@ public class ObstacleSpawner : MonoBehaviour
     public float screenWidth = 16;
     public float screenHeight = 9;
 
+    bool lastBonusKey = false;
     bool lastObstacleTop = true;
+
+    int bonusCountdown = 3;
     // Start is called before the first frame update
     void Start()
     {

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rigid2D;
     public GameObject cameraObject;
+    public PlayerFollower lastFollower;
     public float screenHeight = 9;
     public float screenWidth = 16;
     public float speed = 3;
@@ -15,9 +16,12 @@ public class PlayerController : MonoBehaviour
     public int birds = 1;
     public int hpModifier;
 
+    public int keyCount = 0;
+
     float invulnSecs = 0;
     float invulnFlash = 0;
     bool isFlash = false;
+    
 
     private void Start()
     {
@@ -27,7 +31,6 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float cameraX = cameraObject.transform.position.x;
         rigid2D.velocity = new Vector2(CameraMovement.moveSpeed, 0);
         if(Input.GetAxis("Vertical") > 0 && transform.position.y <=  screenHeight/2 - 1)
         {
@@ -43,7 +46,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.eulerAngles = Vector3.zero;
         }
-        if (Input.GetAxis("Horizontal") < 0 && transform.position.x >= cameraX - screenWidth/2 + 1)
+        if (Input.GetAxis("Horizontal") < 0 && transform.position.x >= CameraMovement.cameraX - screenWidth/2 + 1)
         {
             rigid2D.velocity -= new Vector2(speed, 0);
         }
@@ -81,6 +84,25 @@ public class PlayerController : MonoBehaviour
             hp--;
             invulnSecs = 4;
             //TODO Death condition;
+        }
+        if(collision.CompareTag("Key"))
+        {
+            keyCount++;
+            Destroy(collision.gameObject);
+        }
+        if(collision.CompareTag("Cage") && keyCount > 0)
+        {
+            CageSpawn cage = collision.gameObject.GetComponent<CageSpawn>();
+            if(!cage.isBirdFreed)
+            {
+                keyCount--;
+                GameObject bird = cage.FreeTheBird();
+                PlayerFollower currentFollower = bird.GetComponent<PlayerFollower>();
+                currentFollower.following = lastFollower;
+                lastFollower = currentFollower;
+                birds++;
+                hp = birds * hpModifier;
+            }
         }
     }
 }
