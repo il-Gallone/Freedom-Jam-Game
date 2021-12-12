@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
     public float rotationAngle = 15;
 
     public int hp;
-    public int birds = 1;
-    public int hpModifier;
 
     public int keyCount = 0;
 
@@ -25,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        hp = birds * hpModifier;
+        hp = 1;
     }
 
     // Update is called once per frame
@@ -88,8 +86,18 @@ public class PlayerController : MonoBehaviour
                 audioData.Play(0);
             }
             hp--;
-            invulnSecs = 4;
-            //TODO Death condition;
+            if (hp > 0)
+            {
+                lastFollower.BirdHit();
+                GameObject bird = lastFollower.gameObject;
+                lastFollower = lastFollower.following;
+
+                invulnSecs = 4;
+            }
+            else
+            {
+                //TODO Death condition;
+            }
         }
         if(collision.CompareTag("Key"))
         {
@@ -113,8 +121,7 @@ public class PlayerController : MonoBehaviour
                 PlayerFollower currentFollower = bird.GetComponent<PlayerFollower>();
                 currentFollower.following = lastFollower;
                 lastFollower = currentFollower;
-                birds++;
-                hp = birds * hpModifier;
+                hp++;
             }
         }
     }
