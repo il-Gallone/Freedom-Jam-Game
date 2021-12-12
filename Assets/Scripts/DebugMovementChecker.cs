@@ -17,7 +17,7 @@ public class DebugMovementChecker : MonoBehaviour
         if(cameraObject.transform.position.x > lastDistance + debugDistance/2 - 2)
         {
             lastDistance += debugDistance;
-            GameObject debugObject = Instantiate(debugPrefab, new Vector3(lastDistance, 0, 0), Quaternion.identity);
+            Instantiate(debugPrefab, new Vector3(lastDistance, 0, 0), Quaternion.identity);
         }
     }
 }

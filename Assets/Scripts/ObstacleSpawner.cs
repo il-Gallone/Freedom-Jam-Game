@@ -6,6 +6,7 @@ public class ObstacleSpawner : MonoBehaviour
 {
     public GameObject obstacleTopPrefab;
     public GameObject obstacleBotPrefab;
+    public GameObject obstacleExtPrefab;
     public GameObject KeyPrefab;
     public GameObject CagePrefab;
 
@@ -23,11 +24,21 @@ public class ObstacleSpawner : MonoBehaviour
 
     int bonusCountdown = 3;
     public int bonusDistance = 5;
+    int extraCountdown = 0;
+    public int extraDistance = -1;
     // Start is called before the first frame update
     void Start()
     {
         lastDistance = screenWidth / 2;
         nextDistance = Random.Range(minDistanceModifier + CameraMovement.moveSpeed, maxDistanceModifier + CameraMovement.moveSpeed);
+        if (extraDistance == -1)
+        {
+            extraCountdown = -1;
+        }
+        else
+        {
+            extraCountdown = extraDistance + Random.Range(-2, +3);
+        }
     }
 
     // Update is called once per frame
@@ -40,14 +51,18 @@ public class ObstacleSpawner : MonoBehaviour
             if (lastObstacleTop)
             {
                 lastObstacleTop = false;
-                GameObject obstacle = Instantiate(obstacleBotPrefab, new Vector3(lastDistance, Random.Range(-6f, -3f), 0), Quaternion.identity);
+                Instantiate(obstacleBotPrefab, new Vector3(lastDistance, Random.Range(-6f, -3f), 0), Quaternion.identity);
             }
             else
             {
                 lastObstacleTop = true;
-                GameObject obstacle = Instantiate(obstacleTopPrefab, new Vector3(lastDistance, Random.Range(3f, 6f), 0), Quaternion.identity);
+                Instantiate(obstacleTopPrefab, new Vector3(lastDistance, Random.Range(3f, 6f), 0), Quaternion.identity);
             }
             bonusCountdown--;
+            if(extraCountdown != -1)
+            {
+                extraCountdown--;
+            }
         }
         if(bonusCountdown == 0)
         {
@@ -64,13 +79,18 @@ public class ObstacleSpawner : MonoBehaviour
             if(lastBonusKey)
             {
                 lastBonusKey = false;
-                GameObject bonus = Instantiate(CagePrefab, spawnPositon, Quaternion.identity);
+                Instantiate(CagePrefab, spawnPositon, Quaternion.identity);
             }
             else
             {
                 lastBonusKey = true;
-                GameObject bonus = Instantiate(KeyPrefab, spawnPositon, Quaternion.identity);
+                Instantiate(KeyPrefab, spawnPositon, Quaternion.identity);
             }
+        }
+        if(extraCountdown == 0)
+        {
+            extraCountdown = extraDistance + Random.Range(-2, +3);
+            Instantiate(obstacleExtPrefab);
         }
     }
 }
