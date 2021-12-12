@@ -1,31 +1,7 @@
 fileFormatVersion: 2
-guid: b423ea1759b4f8b4f8712f6d5ce9b3a0
+guid: 8847f1e6eaab92447a88e49986b322b7
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -659994094409050843
-    second: Bird SpriteSheet Obsidian_0
-  - first:
-      213: 5006623806647156233
-    second: Bird SpriteSheet Obsidian_1
-  - first:
-      213: 6061996362000068587
-    second: Bird SpriteSheet Obsidian_2
-  - first:
-      213: 4525805323953390882
-    second: Bird SpriteSheet Obsidian_3
-  - first:
-      213: 4717500967294356401
-    second: Bird SpriteSheet Obsidian_4
-  - first:
-      213: -799854829579191734
-    second: Bird SpriteSheet Obsidian_5
-  - first:
-      213: -8011431724761380933
-    second: Bird SpriteSheet Obsidian_6
-  - first:
-      213: -5371066821492480139
-    second: Bird SpriteSheet Obsidian_7
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -65,12 +41,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,213 +75,9 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Bird SpriteSheet Obsidian_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 300
-        width: 360
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52594e03eda37d6f0800000000000000
-      internalID: -659994094409050843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird SpriteSheet Obsidian_1
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 300
-        width: 360
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90eb73f63d91b7540800000000000000
-      internalID: 5006623806647156233
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird SpriteSheet Obsidian_2
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 300
-        width: 360
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bef69bac299802450800000000000000
-      internalID: 6061996362000068587
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird SpriteSheet Obsidian_3
-      rect:
-        serializedVersion: 2
-        x: 1080
-        y: 300
-        width: 360
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22540d0a6f3eece30800000000000000
-      internalID: 4525805323953390882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird SpriteSheet Obsidian_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 360
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1bb4427a22ee77140800000000000000
-      internalID: 4717500967294356401
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird SpriteSheet Obsidian_5
-      rect:
-        serializedVersion: 2
-        x: 360
-        y: 0
-        width: 360
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4a3d03354856e4f0800000000000000
-      internalID: -799854829579191734
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird SpriteSheet Obsidian_6
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 360
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb78d4fea4da1d090800000000000000
-      internalID: -8011431724761380933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bird SpriteSheet Obsidian_7
-      rect:
-        serializedVersion: 2
-        x: 1080
-        y: 0
-        width: 360
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 577ed08de232675b0800000000000000
-      internalID: -5371066821492480139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
