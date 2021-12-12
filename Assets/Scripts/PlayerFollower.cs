@@ -10,6 +10,7 @@ public class PlayerFollower : MonoBehaviour
     public float speed;
     public Rigidbody2D rigid2D;
     float yCounter;
+    public float rotationAngle = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -46,10 +47,16 @@ public class PlayerFollower : MonoBehaviour
             if (following.lastY -0.1f > transform.position.y)
             {
                 yDirection = 1;
+                transform.eulerAngles = new Vector3(0, 0, rotationAngle);
             }
             else if (following.lastY +0.1f < transform.position.y)
             {
                 yDirection = -1;
+                transform.eulerAngles = new Vector3(0, 0, -rotationAngle);
+            }
+            else
+            {
+                transform.eulerAngles = Vector3.zero;
             }
             rigid2D.velocity += new Vector2(xDirection, yDirection) * speed;
         }
