@@ -22,6 +22,9 @@ public class ButtonHandler : MonoBehaviour
             case "Enter Caves":
                 SceneManager.LoadScene("CaveScene");
                 break;
+            case "Enter Mines":
+                SceneManager.LoadScene("MineScene");
+                break;
         }
     }
 
