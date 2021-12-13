@@ -706,7 +706,6 @@ MonoBehaviour:
   levelEndChanger: 1600
   accelRate: 0.065
   rigid2D: {fileID: 519420033}
-  player: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -871,7 +870,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e8bb261b80c57554ab04be93b98918ee, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 88295408343f5b94f8d5bb3cb466e3fc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
