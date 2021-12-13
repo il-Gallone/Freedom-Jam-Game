@@ -11,12 +11,10 @@ public class CameraMovement : MonoBehaviour
     public static float moveSpeed = 1;
     public float accelRate = 0.05f;
     public Rigidbody2D rigid2D;
-    public PlayerController player;
 
     // Update is called once per frame
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         levelEndX = levelEndChanger;
         moveSpeed = startSpeed;
     }
@@ -28,7 +26,7 @@ public class CameraMovement : MonoBehaviour
             cameraX = transform.position.x;
             moveSpeed += accelRate * Time.deltaTime;
             rigid2D.velocity = new Vector2(moveSpeed, 0);
-            if (player.transform.position.x > transform.position.x + PlayerController.screenWidth / 4)
+            if (GameObject.FindGameObjectWithTag("Player").transform.position.x > transform.position.x + PlayerController.screenWidth / 4)
             {
                 moveSpeed += accelRate * PlayerController.speed / moveSpeed * Time.deltaTime;
                 rigid2D.velocity += new Vector2(PlayerController.speed, 0);

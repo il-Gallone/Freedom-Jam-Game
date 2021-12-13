@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if (transform.position.x < CameraMovement.cameraX - PlayerController.screenWidth / 2)
+            if (transform.position.x < CameraMovement.cameraX - screenWidth / 2)
             {
                 rigid2D.velocity += new Vector2(speed, 0);
             }
@@ -189,6 +189,7 @@ public class PlayerController : MonoBehaviour
         gameObject.GetComponent<CapsuleCollider2D>().isTrigger = true;
         if (hp > 0)
         {
+            gameObject.tag = "Follower";
             followingMe.BecomePlayer();
         }
         rigid2D.gravityScale = 2;
@@ -200,7 +201,6 @@ public class PlayerController : MonoBehaviour
     {
         isPlayer = true;
         gameObject.tag = "Player";
-        following = null;
         invulnSecs = 4;
         gameObject.GetComponent<CapsuleCollider2D>().isTrigger = false;
     }
