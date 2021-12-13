@@ -31,6 +31,9 @@ public class ButtonHandler : MonoBehaviour
             case "Main Menu":
                 SceneManager.LoadScene("Main Menu");
                 break;
+            case "Birdpedia":
+                SceneManager.LoadScene("Birdpedia");
+                break;
             case "Credits":
                 SceneManager.LoadScene("Credits");
                 break;
